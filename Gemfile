@@ -59,6 +59,8 @@ group :development, :test do
   gem "webmock"
   # VCR is a gem for recording and replaying HTTP interactions for your Rails tests
   gem "vcr"
+  # Shoulda Matchers is a library with a set of matchers for testing your Rails applications [https://github.com/thoughtbot/shoulda-matchers]
+  gem "shoulda-matchers"
 end
 
 group :development do
