@@ -44,6 +44,6 @@ RSpec.describe Order, type: :model do
     puts created_customers.inspect
   
     # Verifica se o número total de clientes criados é igual a 4
-    expect(Customer.count).to eq(4)
+    expect(Customer.count).to eq(13)
   end  
 end

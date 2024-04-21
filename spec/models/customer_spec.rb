@@ -37,7 +37,7 @@ RSpec.describe Customer, type: :model do
 
   it "attributes for" do
     attrs = attributes_for(:customer)    
-    customer = Customer.create(attrs1)
+    customer = Customer.create(attrs)
     puts attrs
     #puts customer.inspect
 
@@ -68,11 +68,21 @@ RSpec.describe Customer, type: :model do
     expect(customer.vip).to eq(true)
   end
   
+  it "travel_to" do
+    # travel_to Time.zone.local(2004, 11, 24, 01, 04, 44) do
+    #   @customer = create(:customer_vip)      
+    # end
+    # puts @customer.created_at
+    # puts Time.zone.now
+    # expect(@customer.created_at).to eq(Time.new(2004, 11, 24, 01, 04, 44).in_time_zone)
+    
+    travel_to Time.new(2004, 11, 24, 01, 04, 44) do
+      @customer = create(:customer_vip)  
+    end
+    puts @customer.created_at
+    puts Time.zone.now
+  
+    # Convertendo o objeto Time.new para o fuso horário local antes de comparar
+    expect(@customer.created_at).to eq(Time.new(2004, 11, 24, 01, 04, 44))
+  end  
 end
-
-
-
-
-
-
-# Factory

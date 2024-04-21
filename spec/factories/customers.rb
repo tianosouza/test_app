@@ -2,6 +2,7 @@ FactoryBot.define do
   factory :customer, aliases: [:user, :father] do
     sequence(:name) { |n| "Fulano #{n}" }
     sequence(:email) { |n| "fulano_ #{n}@mail.com" }
+    adrdress { Faker::Address.street_address }
     # gender [ "M", "F" ].sample
     
     trait :male do

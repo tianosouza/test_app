@@ -53,6 +53,12 @@ group :development, :test do
   gem "factory_bot_rails"
   # Faker is a port of Perl's Data::Faker library [https://github.com/faker-ruby/faker]
   gem "faker"
+  # HTTParty is a simple HTTP and REST client for Ruby [https://github.com/jnunemaker/httparty]
+  gem "httparty"
+  # Webmock is a library for stubbing and setting expectations on HTTP requests in Ruby [https://github.com/bblimke/webmock]
+  gem "webmock"
+  # VCR is a gem for recording and replaying HTTP interactions for your Rails tests
+  gem "vcr"
 end
 
 group :development do
