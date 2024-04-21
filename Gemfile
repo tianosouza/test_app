@@ -47,11 +47,19 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  # Rspec-rails is a testing framework for Rails [https://github.com/rspec/rspec-rails]
+  gem 'rspec-rails', '~> 6.1', '>= 6.1.2'
+  # Factory Bot is a fixtures replacement with a straightforward definition syntax
+  gem "factory_bot_rails"
+  # Faker is a port of Perl's Data::Faker library [https://github.com/faker-ruby/faker]
+  gem "faker"
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
+  gem 'spring-commands-rspec'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
