@@ -3,6 +3,8 @@ require "webmock/rspec"
 # VCR gem
 require "vcr"
 
+require "devise"
+
 # VCR config
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
@@ -27,7 +29,6 @@ end
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
 
-  
   # FactoryBot Lint
   # config.before(:suite) do
   #   FactoryBot.lint
